@@ -1,0 +1,36 @@
+modLoader="neoforge"
+loaderVersion="[55.0.40,)"
+license="MIT"
+issueTrackerURL=""
+[[mods]]
+modId="hulkmod"
+version="1.0.0"
+displayName="Hulk Mod"
+authors="HulkMod Team"
+description='''
+Hulk Mod - İçtiğinizde Hulk'a dönüşen bir iksir ekler.
+Özellikler:
+- Yeşil kambur dev modeli (GeckoLib animasyonlu)
+- Süper güç: tek vuruşla mob öldürme, eliyle blok kırma
+- Zıplama/Dash yetenekleri
+- Sağlık ve direniş artışı
+- 5 dakika süren dönüşüm
+- Crafting recepti ile elde edilebilir
+'''
+displayURL="https://github.com/"
+credits="GeckoLib, NeoForge"
+logoFile=""
+
+[[dependencies.hulkmod]]
+modId="neoforge"
+mandatory=true
+versionRange="[55.0.40,)"
+ordering="NONE"
+side="BOTH"
+
+[[dependencies.hulkmod]]
+modId="geckolib"
+mandatory=true
+versionRange="[4.2.4,)"
+ordering="NONE"
+side="BOTH"

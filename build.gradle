@@ -1,0 +1,70 @@
+plugins {
+    id 'java'
+    id 'org.jetbrains.kotlin.jvm' version '1.9.24'
+    id 'net.neoforged.gradle' version '1.2.0'
+    id 'com.github.johnrengelman.shadow' version '8.1.1'
+}
+
+group = 'com.hulkmod'
+version = '1.0.0'
+
+java {
+    toolchain {
+        languageVersion = JavaLanguageVersion.of(21)
+    }
+}
+
+repositories {
+    mavenCentral()
+    maven { url 'https://maven.neoforged.net/releases' }
+    maven { url 'https://maven.geckolib.com/' }
+    maven { url 'https://jitpack.io' }
+}
+
+dependencies {
+    minecraft 'net.neoforged:neoforge:1.21.1-55.0.40'
+    implementation 'com.geckolib:geckolib-neo:1.21.1-4.2.4'
+    implementation 'org.jetbrains.kotlin:kotlin-stdlib-jdk8:1.9.24'
+}
+
+tasks.withType(JavaCompile) {
+    options.encoding = 'UTF-8'
+    options.release = 21
+    options.compilerArgs << '-Xlint:unchecked' << '-Xlint:deprecation'
+    kotlinOptions {
+        jvmTarget = '21'
+        freeCompilerArgs = ['-Xjvm-default=all', '-Xopt-in=kotlin.RequiresOptIn']
+    }
+}
+
+jar {
+    manifest {
+        attributes(
+            'Implementation-Title': 'Hulk Mod',
+            'Implementation-Version': project.version,
+            'Main-Class': 'com.hulkmod.HulkMod',
+            'NeoForge-Mod': 'true'
+        )
+    }
+    from(sourceSets.main.output)
+    duplicatesStrategy = DuplicatesStrategy.INCLUDE
+}
+
+shadowJar {
+    archiveClassifier.set('')
+    manifest {
+        attributes(
+            'Implementation-Title': 'Hulk Mod',
+            'Implementation-Version': project.version,
+            'Main-Class': 'com.hulkmod.HulkMod',
+            'NeoForge-Mod': 'true'
+        )
+    }
+}
+
+build.finalizedBy(shadowJar)
+
+neoforge {
+    mappings = 'official'
+    modLoader = 'neoforge'
+}

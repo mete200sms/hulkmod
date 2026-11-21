@@ -1,0 +1,14 @@
+{
+  "itemGroup.hulkmod": "Hulk Modu",
+  "item.hulkmod.hulk_potion": "Hulk İksiri",
+  "item.hulkmod.hulk_potion.desc1": "§aİçerek 5 dakika boyunca Hulk'a dönüşürsün",
+  "item.hulkmod.hulk_potion.desc2": "§7Süper güç, dayanıklılık ve hareket yeteneği verir",
+  "item.hulkmod.hulk_potion.desc3": "§6Yetenekler: Süper Zıplama (Çift Space), Yer Çarpma (Shift+Sağ Tık), Hızlanma (Çift W), Kükreme (R)",
+  "item.hulkmod.hulk_potion.desc4": "§cUyarı: Dönüşüm süre bitene kadar iptal edilemez",
+  "effect.hulkmod.hulk_transformation": "Hulk Dönüşümü",
+  "key.hulkmod.super_jump": "Süper Zıplama",
+  "key.hulkmod.ground_slam": "Yer Çarpma",
+  "key.hulkmod.dash": "Hızlanma",
+  "key.hulkmod.roar": "Kükreme",
+  "key.categories.hulkmod": "Hulk Yetenekleri"
+}

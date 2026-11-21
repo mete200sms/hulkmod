@@ -1,0 +1,14 @@
+{
+  "itemGroup.hulkmod": "Hulk Mod",
+  "item.hulkmod.hulk_potion": "Hulk Potion",
+  "item.hulkmod.hulk_potion.desc1": "§aDrink to transform into the Hulk for 5 minutes",
+  "item.hulkmod.hulk_potion.desc2": "§7Grants super strength, durability, and mobility",
+  "item.hulkmod.hulk_potion.desc3": "§6Abilities: Super Jump (Double Space), Ground Slam (Shift+Right Click), Dash (Double W), Roar (R)",
+  "item.hulkmod.hulk_potion.desc4": "§cWarning: Transformation is irreversible until duration ends",
+  "effect.hulkmod.hulk_transformation": "Hulk Transformation",
+  "key.hulkmod.super_jump": "Super Jump",
+  "key.hulkmod.ground_slam": "Ground Slam",
+  "key.hulkmod.dash": "Dash",
+  "key.hulkmod.roar": "Roar",
+  "key.categories.hulkmod": "Hulk Abilities"
+}
